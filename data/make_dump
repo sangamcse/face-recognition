@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo '{' > data.json
+for filename in $(ls faces/men); do
+  echo '    "data/faces/men/'${filename}'": 0,' >> data.json
+done
+for filename in $(ls faces/women); do
+  echo '    "data/faces/women/'${filename}'": 1,' >> data.json
+done
+echo '}' >> data.json
